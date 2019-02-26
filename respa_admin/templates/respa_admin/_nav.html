@@ -9,6 +9,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
+                {% if INSTRUCTIONS_URL %}
+                <li>
+                    <a href="{{ INSTRUCTIONS_URL }}">
+                        <span class="glyphicon glyphicon-question-sign icon-left" aria-hidden="true"></span>
+                        {% trans "Instructions" %}
+                    </a>
+                </li>
+                {% endif %}
                 <li>
                     <a href="#">
                         <span class="glyphicon glyphicon-user icon-left" aria-hidden="true"></span>
