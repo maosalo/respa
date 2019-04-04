@@ -34,6 +34,7 @@ env = environ.Env(
     MAIL_MAILGUN_DOMAIN=(str, ''),
     MAIL_MAILGUN_API=(str, ''),
     RESPA_IMAGE_BASE_URL=(str, ''),
+    VARAAMO_RESOURCES_URL=(str, ''),
 )
 environ.Env.read_env()
 
@@ -268,6 +269,8 @@ RESPA_MAILS_FROM_ADDRESS = env('MAIL_DEFAULT_FROM')
 RESPA_CATERINGS_ENABLED = False
 RESPA_COMMENTS_ENABLED = False
 RESPA_DOCX_TEMPLATE = os.path.join(BASE_DIR, 'reports', 'data', 'default.docx')
+
+VARAAMO_RESOURCES_URL = env('VARAAMO_RESOURCES_URL')
 
 if env('MAIL_MAILGUN_KEY'):
     ANYMAIL = {
